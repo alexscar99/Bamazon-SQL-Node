@@ -1,0 +1,23 @@
+{
+  "name": "bamazon-sql-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexscar99/Bamazon-SQL-Node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexscar99/Bamazon-SQL-Node/issues"
+  },
+  "homepage": "https://github.com/alexscar99/Bamazon-SQL-Node#readme",
+  "dependencies": {
+    "inquirer": "^5.2.0",
+    "mysql": "^2.15.0"
+  }
+}
