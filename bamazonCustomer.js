@@ -17,13 +17,13 @@ connection.connect(function(err) {
 function showProducts() {
   connection.query('SELECT * FROM products', function(err, res) {
     if (err) throw err;
-    console.log('Bamazon Products');
-    console.log('========================');
+    console.log('Bamazon Products\n');
+    console.log('========================\n');
     for (i = 0; i < res.length; i++) {
       console.log('Product ID: ' + res[i].item_id);
       console.log('Product Name: ' + res[i].product_name);
-      console.log('Price: $' + res[i].price);
-      console.log('----------------------');
+      console.log('Price: $' + res[i].price + '\n');
+      console.log('----------------------\n');
     }
   });
   startPurchase();
