@@ -30,7 +30,7 @@ function showProducts() {
 }
 
 function startPurchase() {
-  connection.query('SELECT * from products', function(err, res) {
+  connection.query('SELECT * FROM products', function(err, res) {
     if (err) throw err;
 
     inquirer
@@ -39,12 +39,24 @@ function startPurchase() {
           name: 'id',
           type: 'input',
           message:
-            'What is the Product ID of the item you would like to purchase?'
+            'What is the Product ID of the item you would like to purchase?',
+          validate: function(value) {
+            if (isNaN(value) === false) {
+              return true;
+            }
+            return false;
+          }
         },
         {
           name: 'quantity',
           type: 'input',
-          message: 'How many would you like to purchase?'
+          message: 'How many would you like to purchase?',
+          validate: function(value) {
+            if (isNaN(value) === false) {
+              return true;
+            }
+            return false;
+          }
         }
       ])
       .then(function(answers) {

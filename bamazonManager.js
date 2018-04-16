@@ -96,7 +96,13 @@ function addInventory() {
         {
           name: 'addInventory',
           type: 'input',
-          message: 'How many would you like to add?'
+          message: 'How many would you like to add?',
+          validate: function(value) {
+            if (isNaN(value) === false) {
+              return true;
+            }
+            return false;
+          }
         }
       ])
       .then(function(answers) {
